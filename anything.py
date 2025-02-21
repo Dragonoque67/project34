@@ -7,7 +7,7 @@ import streamlit as st
 image_url = "https://github.com/Dragonoque67/project34/blob/main/yoyo.jpg"
 
 st.title("Display an Image from GitHub")
-st.image(image_url, caption="GitHub Image", use_column_width=True)
+st.image(image_url)
 
 st.button('fruity')
 st.checkbox('are you gay?')
