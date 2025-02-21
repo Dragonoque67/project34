@@ -1,8 +1,7 @@
 #streamlit app
 import streamlit as st
 st.write("hey little gayboi")
-image_local = Image.open("yoyo.png")
-st.image(image_local, caption="yoyo", use_column_width=True)
+at.image("yoyo.png")
 st.button('fruity')
 st.checkbox('are you gay?')
 st.slider("how much u gay?",0,100)
