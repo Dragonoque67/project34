@@ -1,7 +1,14 @@
 #streamlit app
 import streamlit as st
 st.write("hey little gayboi")
-st.image("yoyo.png")
+import streamlit as st
+
+# GitHub raw image URL
+image_url = "https://github.com/Dragonoque67/project34/blob/main/yoyo.jpg"
+
+st.title("Display an Image from GitHub")
+st.image(image_url, caption="GitHub Image", use_column_width=True)
+
 st.button('fruity')
 st.checkbox('are you gay?')
 st.slider("how much u gay?",0,100)
