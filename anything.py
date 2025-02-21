@@ -9,4 +9,4 @@ if options=="coffee":
   st.info(f"milk amount is {milk}")
 st.button('fruity')
 st.checkbox('are you gay?')
-st.download-button("when did you turn gay?", okay)
+st.slider("how much u gay?",0,100)
