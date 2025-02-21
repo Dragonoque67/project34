@@ -1,6 +1,6 @@
 #streamlit app
 import streamlit as st
-st.write("hey")
+st.write("hey customer!")
 st.sidebar.write("sidebar")
 options= st.selectbox("options",["coffee","juice","tea"])
 if options=="coffee":
