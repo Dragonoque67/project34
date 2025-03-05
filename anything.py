@@ -1,16 +1,26 @@
-#streamlit app
 import streamlit as st
-st.write("hey little gayboi")
-import streamlit as st
+import matplotlib.pyplot as plt
 
-# GitHub raw image URL
-image_url = "https://github.com/Dragonoque67/project34/blob/main/yoyo.jpg"
+def display_pie_chart(data_dict, title="Pie Chart"):
+    """
+    Display a pie chart in Streamlit.
+    
+    Parameters:
+    - data_dict (dict): A dictionary with labels as keys and values as values.
+    - title (str): Title of the pie chart.
+    """
+    labels = list(data_dict.keys())
+    values = list(data_dict.values())
+    
+    fig, ax = plt.subplots()
+    ax.pie(values, labels=labels, autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
+    ax.set_title(title)
+    
+    st.pyplot(fig)
 
-st.title("Display an Image from GitHub")
-st.image(image_url)
-
-st.button('fruity')
-st.checkbox('are you gay?')
-st.slider("how much u gay?",0,100)
-if st.button("garv's gay pics"):
-    st.write("go away rajat")
+# Example usage in a Streamlit app
+if __name__ == "__main__":
+    st.title("Pie Chart Example")
+    
+    sample_data = {"A": 40, "B": 30, "C": 20, "D": 10}
+    display_pie_chart(sample_data, title="Sample Pie Chart")
