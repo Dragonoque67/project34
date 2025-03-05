@@ -24,3 +24,10 @@ if __name__ == "__main__":
     
     sample_data = {"A": 40, "B": 30, "C": 20, "D": 10}
     display_pie_chart(sample_data, title="Sample Pie Chart")
+def plot_pie_chart(data, column):
+    """Plots a pie chart based on the selected column."""
+    fig, ax = plt.subplots()
+    data[column].value_counts().plot.pie(autopct='%1.1f%%', ax=ax)
+    ax.set_title(f"Pie Chart of {column}")
+    st.pyplot(fig)
+
